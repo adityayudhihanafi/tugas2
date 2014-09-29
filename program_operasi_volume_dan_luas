@@ -1,0 +1,80 @@
+#include <stdio.h>
+#include <conio.h>
+main()
+{
+int operasi;
+float a, b, c, t, volume, luas, volume_silinder, menu;
+char back;
+do {
+
+    printf("                  Program Penghitung Volume dan Luas Bangun Ruang\n\n");
+    printf("\n================================================================================\n\n");
+    printf("                        Dibuat Oleh : Aditya Yudhi Hanafi\n                                NIM : 314 3111 024\n\n");
+    printf("Pilihan Menu : \n\n");
+    printf("1. Menghitung Volume Kubus\n");
+    printf("2. Menghitung Luas Lingkaran\n");
+    printf("3. menghitung Volume Silinder\n\n");
+    printf("Silahkan Masukkan Menu = ");
+    scanf("%d", &operasi);
+    printf("\n================================================================================\n\n");
+switch (operasi)
+        {
+    case 1 :
+        {
+            printf("Masukkan Panjang Sisi Kubus ( dalam cm )= ");
+            scanf("%f", &a);
+
+            volume = pow(a,3);
+
+            printf("Maka Volume Kubus adalah = %2.2f cm3\n", volume);
+            printf("\n================================================================================\n\n");
+
+            break;
+        }
+
+    case 2 :
+        {
+            printf("Masukkan Panjang Jari - Jari Lingkaran (dalam cm) = ");
+            scanf("%f", &b);
+
+            luas = 3.14*pow (b,2);
+
+            printf("Maka Luas Lingkaran adalah = %2.2f cm2\n", luas);
+            printf("\n================================================================================\n\n");
+
+            break;
+        }
+
+    case 3 :
+        {
+            printf("Masukkan Jari - Jari Lingakaran (dalam cm) = ");
+            scanf("%f", &c);
+            printf("Masukkan Tinggi Silinder (dalam cm) = ");
+            scanf("%f", &t);
+
+            volume_silinder = 3.14*pow (c,2)*t;
+
+            printf("Maka Volume Silinder adalah = %2.2f cm3\n", volume_silinder);
+            printf("\n================================================================================\n\n");
+
+            break;
+        }
+
+    default:
+        {
+        printf("                                    E R R O R !!!                      \n\n\n");
+        printf("                 Pilihan Menu yang Anda Masukkan Tidak Ada di Daftar\n");
+        printf("                         Silahkan Masukkan Pilihan Menu lagi\n\n");
+        printf("\n================================================================================\n\n");
+        break;
+        }
+        getch();
+         }
+
+printf("Anda Akan Mengulan ? [y/t]\n\n");
+scanf("%s", &back);
+    }
+while (back!='t');
+
+}
+
